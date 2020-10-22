@@ -13,16 +13,18 @@ export const DynamicChart = () => {
   const chart = () => {
     let empSal = [];
     let empAge = [];
+    let empName = [];
     axios
-      .get("http://dummy.restapiexample.com/api/v1/employees")
+      .get("https://dummy.restapiexample.com/api/v1/employees")
       .then((res) => {
         console.log("axios response:", res);
         for (const dataObj of res.data.data) {
           empSal.push(parseInt(dataObj.employee_salary));
           empAge.push(parseInt(dataObj.employee_age));
+          empName.push(dataObj.employee_name);
         }
         setChartData({
-          labels: empAge,
+          labels: empName,
           datasets: [
             {
               label: "Salary",
@@ -37,7 +39,8 @@ export const DynamicChart = () => {
       .catch((err) => {
         console.log("err:", err);
       });
-    console.log("empSal & emgAge:", empSal, empAge);
+    // console.log("empSal & emgAge:", empSal, empAge);
+    console.log('names:', empName);
   };
   useEffect(() => {
     chart();
@@ -62,7 +65,7 @@ export const DynamicChart = () => {
                     beginAtZero: true,
                   },
                   gridLines: {
-                    display: false,
+                    display: true,
                   },
                 },
               ],

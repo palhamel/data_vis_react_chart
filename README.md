@@ -10,9 +10,10 @@
 #### Tech used: 
 - JavaScript
 - Chart.js
+- react-chartjs-2
+- Axios
 - React
 - CSS
-- Lottie
 - Postman
 - VS Code
 - Chrome
