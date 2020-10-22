@@ -1,7 +1,6 @@
-import React from 'react';
-import './App.css';
-import Chartcolor from './components/colorChart'
-
+import React from "react";
+import "./App.css";
+import {Chartcolor} from "./components/colorChart";
 
 function App() {
   return (

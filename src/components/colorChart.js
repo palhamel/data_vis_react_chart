@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Chart from "chart.js";
 import "./colorchart.css";
 
-export default function Chartcolor() {
+export const Chartcolor = () => {
   useEffect(() => {
     const ctx = document.getElementById("myChart");
     new Chart(ctx, {
@@ -21,7 +21,14 @@ export default function Chartcolor() {
               "#cc8bf6",
               "#f9b99d",
             ],
-            borderColor: ["#f38cda", "#71b8f5", "#f9d99d", "#8cefda", "#cc8bf6", "#f9b99d"],
+            borderColor: [
+              "#f38cda",
+              "#71b8f5",
+              "#f9d99d",
+              "#8cefda",
+              "#cc8bf6",
+              "#f9b99d",
+            ],
             borderWidth: 1,
           },
         ],
@@ -30,8 +37,8 @@ export default function Chartcolor() {
   });
   return (
     <div className="chart-wrapper">
-      <h3>color chart</h3>
+      <h3>Chart in color</h3>
       <canvas id="myChart" width="400" height="400" />
     </div>
   );
-}
+};

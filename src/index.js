@@ -1,15 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-// import App from './components/colorChart'
-// import Chartcolor from './components/colorChart'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    {/* <Chartcolor /> */}
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
