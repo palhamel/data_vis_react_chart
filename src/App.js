@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
+import Chartcolor from './components/colorChart'
+
 
 function App() {
   return (
     <div>
-      <h1>hej hej</h1>
+      <h2>Data visualization using React</h2>
+      <Chartcolor />
     </div>
   );
 }

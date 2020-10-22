@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Chart from "chart.js";
-// import "./styles.css";
+import "./colorchart.css";
 
 export default function Chartcolor() {
   useEffect(() => {
@@ -14,14 +14,14 @@ export default function Chartcolor() {
             label: "# of Votes",
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
-              "Red",
-              "Blue",
-              "Yellow",
-              "Green",
-              "Purple",
-              "Orange",
+              "#f38cda",
+              "#71b8f5",
+              "#f9d99d",
+              "#8cefda",
+              "#cc8bf6",
+              "#f9b99d",
             ],
-            borderColor: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            borderColor: ["#f38cda", "#71b8f5", "#f9d99d", "#8cefda", "#cc8bf6", "#f9b99d"],
             borderWidth: 1,
           },
         ],
@@ -29,7 +29,8 @@ export default function Chartcolor() {
     });
   });
   return (
-    <div className="App">
+    <div className="chart-wrapper">
+      <h3>color chart</h3>
       <canvas id="myChart" width="400" height="400" />
     </div>
   );
