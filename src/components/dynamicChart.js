@@ -7,8 +7,8 @@ import "./chartstyle.css";
 export const DynamicChart = () => {
   const [chartData, setChartData] = useState({});
   // console.log(chartData);
-  const [employeeSalary, setEmployeeSalary] = useState([]);
-  const [employeeAge, setEmployeeAge] = useState([]);
+  // const [employeeSalary, setEmployeeSalary] = useState([]);
+  // const [employeeAge, setEmployeeAge] = useState([]);
 
   const chart = () => {
     let empSal = [];
@@ -17,29 +17,27 @@ export const DynamicChart = () => {
       .get("http://dummy.restapiexample.com/api/v1/employees")
       .then((res) => {
         console.log("axios response:", res);
-        for(const dataObj of res.data.data){
-          empSal.push(parseInt(dataObj.employee_salary))
-          empAge.push(parseInt(dataObj.employee_age))
+        for (const dataObj of res.data.data) {
+          empSal.push(parseInt(dataObj.employee_salary));
+          empAge.push(parseInt(dataObj.employee_age));
         }
+        setChartData({
+          labels: empAge,
+          datasets: [
+            {
+              label: "Salary",
+              data: empSal,
+              backgroundColor: ["#FE5F55"],
+              borderWidth: 1,
+              borderColor: ["#FE5F55"],
+            },
+          ],
+        });
       })
       .catch((err) => {
         console.log("err:", err);
       });
-    console.log('empSal:', empSal);
-    console.log('empAge:', empAge);
-
-    setChartData({
-      labels: ["mon", "tue", "wed", "thu", "fri"],
-      datasets: [
-        {
-          label: "the important label here",
-          data: [33, 45, 11, 22, 77],
-          backgroundColor: ["#fbb2c5"],
-          borderWidth: 1,
-          borderColor: ["#6669f7"],
-        },
-      ],
-    });
+    console.log("empSal & emgAge:", empSal, empAge);
   };
   useEffect(() => {
     chart();
@@ -54,7 +52,7 @@ export const DynamicChart = () => {
           data={chartData}
           options={{
             responsive: true,
-            title: { text: "Name of this chart", display: true },
+            title: { text: "Age and salary", display: true },
             scales: {
               yAxes: [
                 {

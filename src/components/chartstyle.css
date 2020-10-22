@@ -7,3 +7,13 @@
  border-radius: 7px;
 }
 
+.chart-wrapper-dynamic {
+  width: 650px;
+  height: auto;
+  background-color: #495867;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 7px;
+
+ }
+
