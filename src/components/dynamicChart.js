@@ -15,7 +15,8 @@ export const DynamicChart = () => {
           label: "the important label here",
           data: [33, 45, 11, 22, 77],
           backgroundColor: ["#fbb2c5"],
-          borderWidth: 2
+          borderWidth: 1,
+          borderColor: ["#6669f7"],
         },
       ],
     });
@@ -29,7 +30,29 @@ export const DynamicChart = () => {
       <h2>Chart using react-chartjs-2</h2>
       <h3>Chart using react-chartjs-2</h3>
       <div>
-        <Line data={chartData}/>
+        <Line 
+          data={chartData}
+          options={
+            {
+              responsive: true,
+              title: {text: 'Name of this chart', display: true},
+              scales: {
+                yAxes: [
+                  {
+                    ticks: {
+                      autoSkip: true,
+                      maxTicksLimit:10,
+                      beginAtZero:true
+                    },
+                    gridLines: {
+                      display: false
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        />
       </div>
     </div>
   );
