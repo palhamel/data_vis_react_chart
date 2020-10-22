@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Chart from "chart.js";
-import "./colorchart.css";
+import "./chartstyle.css";
 
 export const Chartcolor = () => {
   useEffect(() => {
@@ -37,7 +37,7 @@ export const Chartcolor = () => {
   });
   return (
     <div className="chart-wrapper">
-      <h3>Chart in color</h3>
+      <h2>Chart in color</h2>
       <canvas id="myChart" width="400" height="400" />
     </div>
   );
