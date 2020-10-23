@@ -1,9 +1,11 @@
-## Data visualization projects - React
+## Data visualization projects - with React
 ###### - work in progress
 
-*  Using React
-*  
-*  
+*  Using React and building components for visualization
+*  Using data source in JS
+*  Using API data source with real-time fetch with axios
+*  Sort, filter and build new arrays with data
+*  Using react-chartjs-2 - a React wrapper for Chart.js
 
 
 
