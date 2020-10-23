@@ -55,7 +55,7 @@ export const DynamicChart = () => {
           data={chartData}
           options={{
             responsive: true,
-            title: { text: "Age and salary", display: true },
+            title: { text: "Name and salary", display: true },
             scales: {
               yAxes: [
                 {

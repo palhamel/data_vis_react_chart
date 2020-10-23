@@ -20,3 +20,6 @@
 
 
 ## View it live
+https://vibrant-liskov-b4d5c9.netlify.app/
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/59c5a216-959b-40aa-9442-177e5bb37da6/deploy-status)](https://app.netlify.com/sites/vibrant-liskov-b4d5c9/deploys)
